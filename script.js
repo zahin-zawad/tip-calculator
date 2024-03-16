@@ -14,8 +14,8 @@ tipCalculator.addEventListener('keyup', (e) =>{
         e.target.classList.remove('err');
 
         data[e.target.name] = parseFloat(e.target.value);
-
-        const tip = (data.bill * data.tip) / 100;
+        
+        const tip = (data.bill * (data.tip / 100));
         let total = data.bill + tip;
 
         total = total / data.person;
